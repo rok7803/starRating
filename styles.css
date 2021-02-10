@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+.rating-box{
+    display: flex;
+    background-color: #e6e6e6;
+    width: 500px;
+    font-size: 4rem;
+    justify-content: space-between;
+}
+.rating{
+    /*border: solid black 1px;*/
+    height: 100px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.star-outer{
+    position: relative;
+}
+.star-outer::after{
+    content: "\2606";
+    color: black;
+}
+.star-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+.star-inner::after{
+    content: "\2605";
+    color: orange;
+}
+.star-outer:hover ~ .star-outer::after{
+    content: "\2606" !important;
+    color: black !important;
+}
+.rating:hover .star-outer::after{
+    content: "\2605";
+    color: orange;
+}
+#star-inner-1{
+    width: 0;
+}
+#star-inner-2{
+    width: 0;
+}
+#star-inner-3{
+    width: 0;
+}
+#star-inner-4{
+    width: 0;
+}
+#star-inner-5{
+    width: 0;
+}
+.open-rating-chart{
+    position: relative;
+    left: -60px;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+.opened-rating-chart{
+    top: -20px;
+    left: -35px;
+    transform: rotate(180deg);
+}
+.dropdown-content{
+    display: none;
+    width: 500px;
+    padding-bottom: 1rem;
+    background-color: seashell
+}
+.dropdown-show{
+    display: block;
+    ;
+}
+.star-rating-chart{
+    padding: 0 0 0.6rem 1rem;
+    background-color: #e6e6e6;
+}
+.star-bar{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding: 8px 0;
+    background-color: #e6e6e6;
+}
+.side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+}
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+.bar{
+    width: 90%;
+    height: 1rem;
+    background-color: gainsboro; 
+}
+.right{
+    /*text-align: right;*/
+}
+#star-5-value{width: 0; height: 1rem; background-color: green;}
+#star-4-value{width: 0; height: 1rem; background-color: mediumblue ;}
+#star-3-value{width: 0; height: 1rem; background-color: rgb(36, 132, 221);}
+#star-2-value{width: 0; height: 1rem; background-color: orange;}
+#star-1-value{width: 0; height: 1rem; background-color: red;}
+

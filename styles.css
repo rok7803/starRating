@@ -70,14 +70,15 @@ body{
 }
 .open-rating-chart{
     position: relative;
+    /*top: 30px;*/
     left: -60px;
     transform: rotate(90deg);
     cursor: pointer;
 }
 .opened-rating-chart{
-    top: -20px;
+    /*top: -20px;*/
     left: -35px;
-    transform: rotate(180deg);
+    transform: rotate(270deg);
 }
 .dropdown-content{
     display: none;
